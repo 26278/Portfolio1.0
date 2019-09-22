@@ -1,0 +1,190 @@
+.main{
+    background-color: #191C21;
+}
+.main__frame{
+    padding: 25px 0;
+}
+.main__frame__img{
+    border-radius: 50%;
+    width: 250px;
+    height: 250px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    object-fit: cover;
+    border: 1px solid #fff;
+}
+.main__title{
+    text-align: center;
+    font-weight: normal;
+}
+.main__subtitle{
+    text-align: center;
+    font-family: ff-tisa-sans-web-pro, sans-serif;
+    font-weight: 100;
+    font-style: italic;
+}
+.hr__small{
+    color: #fff;
+    width: 86.67%;
+    margin: 8px auto 8px auto;
+}
+.hr__big{
+    color: #fff;
+    width: 90%;
+    margin: 8px auto 8px auto;
+}
+.main__text{
+    padding: 10px 35px;
+    font-weight: 100;
+    margin: 0;
+}
+.main__line--down {
+    padding: 25px;
+}
+.link{
+    color: #8CAAFD;
+    font-weight: bolder;
+    text-decoration: none;
+}
+.link:hover{
+    cursor: pointer;
+}
+/*.main__projects, .main__skills{*/
+/*display: none;*/
+/*}*/
+.hr__appear{
+    display: none;
+}
+.main__projects--title, .main__skills--title{
+    text-align: center;
+}
+.main__projects__img--thewall, .main__projects__img--predatorfishing{
+    width: 80px;
+    margin: auto;
+}
+.main__projects__grid{
+    display: grid;
+    grid-template-columns: 40% 60%;
+}
+.main__skills__part{
+    margin-left: 35px;
+}
+
+@media screen and (min-width: 750px){
+    .hr__disappear{
+        display: none;
+    }
+    .hr__appear{
+        display: block;
+    }
+    .head__nav{
+
+    }
+    .main__top {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+    .main__bottom {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+    .main__frame{
+        padding: 50px 0;
+    }
+    .main__frame__img{
+        width: 20em;
+        height: 20em;
+    }
+    .main__projects, .main__skills {
+        display: block;
+    }
+    .main__projects--title{
+        margin: 20px 50px 10px 50px;
+    }
+    .main__projects__grid{
+        margin-left: 50px;
+        display: grid;
+        grid-template-columns: 30% 70%;
+    }
+    .main__projects__img--thewall {
+        width: 67px;
+        height: 111px;
+        object-fit: cover;
+    }
+    .main__projects__img--predatorfishing{
+        margin-top: 60px;
+        width: 62px;
+        height: 36px;
+    }
+    .main__skills--title{
+        margin: 20px 50px 10px 50px;
+    }
+    .main__skills__part{
+        margin-left: 50px;
+    }
+}
+
+@media screen and (min-width: 1000px) {
+    main{
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        height: auto;
+    }
+    .main__skills{
+        display: none;
+    }
+    .hr__big{
+        display: none;
+    }
+    .main__bottom{
+        display: block;
+    }
+    .hr__disappear{
+        display: block;
+    }
+    .main__about{
+        padding: 10% 0;
+    }
+    .main__text{
+        margin: 2em;
+    }
+    .main__frame{
+        padding: 0;
+    }
+    .main__frame__img{
+        margin: 29% auto;
+    }
+    .main__projects{
+        padding-top: 25%;
+    }
+    .main__projects--title{
+        margin: 20px 50px 30px 50px;
+    }
+    .main__projects__img--thewall{
+        transition: ease-out .3s;
+    }
+    .main__projects__img--thewall:hover{
+        opacity: .7;
+        transform: scale(.95);
+        cursor: pointer;
+    }
+}
+
+@media screen and (min-width: 1400px) {
+    .main__text{
+        margin: 3em;
+    }
+    .main__frame__img{
+        width: 25em;
+        height: 25em;
+    }
+    .main__about{
+        padding-top: 18%;
+    }
+    .main__projects{
+        padding-top: 32%;
+    }
+}
+
+

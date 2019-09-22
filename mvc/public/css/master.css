@@ -1,0 +1,162 @@
+html, body {
+    height: 100%;
+}
+body {
+    font-family: acumin-pro, sans-serif;
+    font-style: normal;
+    font-weight: 100;
+    margin: 0;
+    background: #191C21;
+}
+p, h1, h2, h3, h4, a{
+    color: #fff;
+}
+h4{
+    margin: 18px 0 14px 0;
+}
+
+/* Navigation style */
+.sidenav{
+    height: 100%;
+    width: 0; /* 0 width; change with javascript */
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden; /* disable hotizontal scroll */
+    padding-top: 60px;
+    transition: .5s;
+}
+
+.sidenav a{
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #fff;
+    display: block;
+    transition: .3s;
+}
+
+.sidenav .closebtn{
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+#main{
+    transition: margin-left .5s;
+}
+
+@media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+}
+/* end of nav */
+
+.header{
+    background-color: #000077;
+    max-height: 75px;
+}
+.head__content--title{
+    font-size: 20px;
+    font-weight: normal;
+    text-align: center;
+    margin: 0;
+    padding-top: 25px;
+    max-height: 75px;
+}
+.head__content{
+    display: grid;
+    grid-template-columns: 80% 20%;
+}
+.head__content span{
+    max-height: 75px;
+}
+
+.head__nav{
+    fill: #fff;
+    width: 40px;
+    height: 40px;
+    padding: 18px 18px 18px 17px;
+}
+.head__topnav{
+    display: none;
+}
+.footer{
+    background-color: #000077;
+    height: 100px;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    bottom: 0;
+}
+.foot{
+    display: grid;
+    grid-template-columns: 70% 30%;
+}
+.foot__copyright{
+    font-weight: bolder;
+    margin: 0;
+    padding: 27px 35px;
+}
+.foot__copyright__text{
+    margin: 0;
+}
+.foot__media{
+    padding: 15px 0;
+    display: grid;
+    grid-template-columns: 1fr;
+}
+.foot__media__a{
+    text-decoration: none;
+}
+/*Responsiveness for iPad*/
+@media screen and (min-width: 750px){
+    .footer{
+        bottom: 0;
+    }
+    .foot__media{
+        padding-left: 5em;
+    }
+}
+@media screen and (min-width: 1000px){
+    .header{
+        height: 75px;
+    }
+    .head__nav{
+        display: none;
+    }
+    .head__topnav{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    }
+    .head__topnav a{
+        text-decoration: none;
+        padding-top: 25px;
+        font-size: 18px;
+        font-weight: normal;
+        text-align: center;
+    }
+    .head{
+        display: grid;
+        grid-template-columns: 50% 50%;
+    }
+    .head__content{
+        display: block;
+    }
+
+    .footer{
+        position: absolute;
+    }
+    .foot__media{
+        padding-left: 10em;
+    }
+}
+@media screen and (min-width: 1400px){
+
+    .foot__media{
+        padding-left: 15em;
+    }
+}
