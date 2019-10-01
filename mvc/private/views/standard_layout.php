@@ -5,23 +5,24 @@
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title><?php echo $this->section( 'page_title', 'Standaard pagina titel') ?></title>
+    <link rel="stylesheet" href="<?= url('/css/reset.css')?>">
     <link rel="stylesheet" href="<?php echo url( '/css/master.css' ) ?>" media="all">
     <link rel="stylesheet" href="<?= url('/css/' . $this->section('page_title') . '.css')?>" media="all">
     <link rel="stylesheet" href="https://use.typekit.net/ucu0sov.css">
 </head>
-<body>
+<body class="body">
 <!-- Menu for mobile version -->
 <!-- menu content -->
 <nav id="mySidenav" class="sidenav">
     <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-    <a href="<?= url('/') ?>">Home</a>
-    <a href="<?= url('/projects') ?>">Projects</a>
-    <a href="">About me</a>
-    <a href="">Contact</a>
-    <a href="">Blog</a>
+    <a href="<?= url('/') ?>">Home pagina</a>
+    <a href="<?= url('/projecten') ?>">Projecten</a>
+    <a href="<?= url('/over_mij') ?>">Over mij</a>
+    <a href="<?= url('/contact') ?>">Contact</a>
+    <a href="<?= url('/blog') ?>">Blog</a>
 </nav>
 <!-- page -->
-<div id="main">
+<div id="all">
     <header class="header">
         <div class="head">
             <div class="head__content">
@@ -31,11 +32,11 @@
                     </span>
             </div>
             <div class="head__topnav">
-                <a href="<?= url('/') ?>">Home</a>
-                <a href="<?= url('/projects') ?>">Projects</a>
-                <a href="">About me</a>
-                <a href="">Contact</a>
-                <a href="">Blog</a>
+                <a href="<?= url('/') ?>">Homepagina</a>
+                <a href="<?= url('/projecten') ?>">Projecten</a>
+                <a href="<?= url('/over_mij') ?>">Over mij</a>
+                <a href="<?= url('/contact') ?>">Contact</a>
+                <a href="<?= url('/blog') ?>">Blog</a>
             </div>
         </div>
     </header>

@@ -56,7 +56,10 @@ $router->setBasePath($CONFIG['BASE_URL']);
 
 $router->map( 'GET', '/', 'HomeController#homepage', 'home' );
 
-$router->map( 'GET', '/projects', 'ProjectsController#projects', 'projects' );
+$router->map( 'GET', '/projecten', 'ProjectsController#projects', 'projects' );
+$router->map('GET', '/over_mij', 'AboutmeController#aboutme', 'aboutme');
+$router->map('GET', '/contact', 'ContactController#contact', 'contact');
+$router->map('GET', '/blog', 'BlogController#blog', 'blog');
 
 $router->map( 'GET', '/onze-huisjes', 'FacilitiesController#housesOverview', 'huisjes' );
 $router->map( 'GET', '/onze-huisjes/huis/[i:id]', 'FacilitiesController#showHouse', 'toon-huis' );

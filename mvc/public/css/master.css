@@ -8,11 +8,15 @@ body {
     margin: 0;
     background: #191C21;
 }
-p, h1, h2, h3, h4, a{
+p, h1, h2, h3, h4, h5, h6, a, li{
     color: #fff;
 }
 h4{
     margin: 18px 0 14px 0;
+}
+.body{
+    position: relative;
+    min-height: 100vh;
 }
 
 /* Navigation style */
@@ -45,8 +49,22 @@ h4{
     font-size: 36px;
     margin-left: 50px;
 }
-#main{
+#all{
     transition: margin-left .5s;
+    position: relative;
+    min-height: 100vh;
+}
+.hr--small{
+    color: #888;
+    width: 86.67%;
+    margin: 8px auto 8px auto;
+    border-width: .5px;
+}
+.hr--big{
+    color: #888;
+    width: 90%;
+    margin: 8px auto 8px auto;
+    border-width: .5px;
 }
 
 @media screen and (max-height: 450px) {
@@ -60,7 +78,7 @@ h4{
     max-height: 75px;
 }
 .head__content--title{
-    font-size: 20px;
+    font-size: 24px;
     font-weight: normal;
     text-align: center;
     margin: 0;
@@ -85,6 +103,7 @@ h4{
     display: none;
 }
 .footer{
+    position: absolute;
     background-color: #000077;
     height: 100px;
     padding: 0;
@@ -114,9 +133,6 @@ h4{
 }
 /*Responsiveness for iPad*/
 @media screen and (min-width: 750px){
-    .footer{
-        bottom: 0;
-    }
     .foot__media{
         padding-left: 5em;
     }
@@ -134,7 +150,7 @@ h4{
     }
     .head__topnav a{
         text-decoration: none;
-        padding-top: 25px;
+        padding-top: 29px;
         font-size: 18px;
         font-weight: normal;
         text-align: center;
@@ -145,10 +161,6 @@ h4{
     }
     .head__content{
         display: block;
-    }
-
-    .footer{
-        position: absolute;
     }
     .foot__media{
         padding-left: 10em;
