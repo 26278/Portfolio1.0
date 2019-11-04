@@ -63,6 +63,7 @@ $router->map('GET', '/blog', 'BlogController#blog', 'blog');
 
 $router->map( 'GET', '/onze-huisjes', 'FacilitiesController#housesOverview', 'huisjes' );
 $router->map( 'GET', '/onze-huisjes/huis/[i:id]', 'FacilitiesController#showHouse', 'toon-huis' );
+$router->map( 'GET', '/projecten/project/[i:id]', 'ProjectsController#project', 'show-project');
 
 $router->map( 'GET', '/over-ons', 'PageController#aboutUs', 'over-ons' );
 

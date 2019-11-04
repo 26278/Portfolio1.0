@@ -1,0 +1,131 @@
+
+.overview{
+    margin: 0 auto;
+    width: 80%;
+}
+.overview__title{
+    font-size: 28px;
+    text-align: center;
+    margin-bottom: 1em;
+}
+.overview__text{
+    font-size: 16px;
+    margin: 1em 0;
+    line-height: 1.2;
+}
+.overview__aboutme, .overview__skills{
+    margin: 3em 0;
+}
+.overview__aboutme__text{
+    margin: 2em auto;
+    width: 80%;
+}
+.overview__skills__grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin: 2em auto;
+    width: 80%;
+    grid-gap: 2em;
+}
+.overview__skills__content__title{
+    font-size: 24px;
+    text-align: center;
+    margin: 2em auto
+}
+.overview__skills__content__subtitle{
+    font-size: 20px;
+}
+.languages{
+    display: flex;
+    justify-content: space-around;
+}
+.languages__front-end, .languages__back-end{
+    width: 30%;
+}
+.languages__head{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.languages__icon{
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+}
+.languages__title{
+    font-size: 20px;
+}
+.language__name{
+    font-size: 18px;
+}
+.language__desc{
+    line-height: 1.2;
+}
+.footer{
+    bottom: -160px;
+}
+@media screen and (max-width: 1300px){
+    .overview__skills__content{
+        margin: 0 1em;
+    }
+}
+@media screen and (max-width: 1000px){
+    .overview__skills__grid {
+        grid-template-columns: 1fr;
+    }
+    .overview__skills__content{
+        margin: 0;
+    }
+}
+@media screen and (max-width: 800px){
+    .full-img__text__name{
+        font-size: 80px;
+    }
+    .full-img__text__function{
+        font-size: 32px;
+    }
+    .overview{
+        margin: 4em auto;
+    }
+}
+@media screen and (max-width: 600px) {
+    .overview{
+        margin: 2em auto;
+    }
+    .full-img__text__name {
+        font-size: 60px;
+    }
+    .full-img__text__function{
+        font-size: 26px;
+    }
+    .overview__skills{
+        margin-top: 3em;
+    }
+    .overview__aboutme__text, .overview__skills__grid{
+        margin: 0 auto;
+        width: 80%;
+    }
+    .languages{
+        flex-direction: column;
+    }
+    .languages__front-end, .languages__back-end{
+        margin: 0 auto;
+        width: 80%;
+    }
+    .languages__back-end{
+        margin-top: 3em;
+    }
+}
+@media screen and (max-width: 500px){
+    .full-img__text__name {
+        font-size: 48px;
+    }
+    .full-img__text__function{
+        font-size: 20px;
+    }
+}
+@media screen and (max-width: 400px){
+    .full-img__text__name {
+        font-size: 42px;
+    }
+}

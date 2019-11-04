@@ -1,10 +1,10 @@
 <?php
-
 class ProjectsController{
 
     function projects() {
 
-        $projects = getAllProjects();
+        $topProjects = getAllTopProjects();
+        $otherProjects = getAllOtherProjects();
 
 
         //Hier haal je de template engine op, die weet dat de views in private/views staan
@@ -12,14 +12,19 @@ class ProjectsController{
 
         //De template engine opdracht geven de juiste view weergeven: homepage (de ".php" mag je weglaten uit de naam van de view)
         echo $template_engine->render( 'projects', [
-            'projects' => $projects
+            'topProjects' => $topProjects,
+            'otherProjects' => $otherProjects
         ] );
     }
     function project($id){
-        $project = getAllProjects();
+
+        $topProject = getTopProject($id);
+        $otherProject = getOtherProject($id);
+
         $template_engine = get_template_engine();
-        echo $template_engine->render('view-project', [
-            'project' => $project
+        echo $template_engine->render('show-project', [
+            'project' => $topProject,
+
         ]);
     }
 }

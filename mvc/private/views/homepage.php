@@ -1,6 +1,9 @@
 <?php $this->layout('standard_layout')?>
 <?php $this->start( 'page_title' ) ?>
 Home<?php $this->stop( 'page_title' ) ?>
+<?php $this->start('css') ?>
+<?= 'home' ?>
+<?php $this->stop('css')?>
 
 <main class="main">
     <div class="main__frames">
@@ -12,14 +15,14 @@ Home<?php $this->stop( 'page_title' ) ?>
         </div>
 
         <div class="frames__about">
-            <h1 class="about__title">Jochem de Wit</h1>-->
+            <h1 class="about__title">Jochem de Wit</h1>
             <h3 class="about__subtitle">Fullstack Developer in opleiding</h3>
             <hr class="hr--small">
             <p class="about__text">Motivatie, enthousiasme en nieuwsgierigheid zorgen ervoor dat ik elke dag nieuwe dingen leer op het
                 Mediacollege Amsterdam binnen het vakgebied van een media developer.<br><br>
-                Naast front-end en back-end programmeren krijg ik ook les in project management en user experience design,
+                Naast front-end en back-end programmeren krijg ik ook les in project management en user experience design
                 en hiermee wil ik graag verder in het bedrijfsleven.<br>
-                <a href="<?php echo url('/over_mij') ?>" class="about__readmore">
+                <a href="<?php echo url('/over_mij') ?>" class="readmore">
                     <button class="readmore__button">Lees meer</button>
                 </a>
             </p>
@@ -27,22 +30,24 @@ Home<?php $this->stop( 'page_title' ) ?>
         </div>
 
         <div class="frames__projects">
-            <h2 class="projects__title">Projects</h2>
+            <h2 class="projects__title">Favoriete projecten</h2>
             <hr class="hr--small">
             <div class="projects__grid">
-                <a href="#">
+                <a href="/public/projecten/project/1">
                     <img src="images/the_wall.png" alt="TheWall" class="projects__img-thewall">
                 </a>
 
                 <div class="projects__text">
-                    <a class="grid__title" href="#">The Wall - WeAreSocial</a>
+                    <a class="grid__title" href="/public/projecten/project/1">The Wall - WeAreSocial</a>
                     <p>- Social media platform<br>
                         - Groepsopdracht
                     </p>
                 </div>
-                <img src="images/pred-fish.png" alt="TheWall" class="projects__img-predatorfishing">
+                <a href="/public/projecten/project/2">
+                    <img src="images/predator_fishing.jpg" alt="Predator Fishing" class="projects__img-predatorfishing">
+                </a>
                 <div class="projects__text">
-                    <a class="grid__title" href="#">MyBand - Predator Fishing</a>
+                    <a class="grid__title" href="/public/projecten/project/2">MyBand - Predator Fishing</a>
                     <p>- MVC (Model View Controller)<br>
                         - Solo opdracht
                     </p>

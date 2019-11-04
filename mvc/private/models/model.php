@@ -50,29 +50,53 @@ function getAllHouses() {
 
 }
 
-function getAllProjects(){
+function getAllTopProjects(){
     $database = dbConnect();
 
-    $statement = $database->query('SELECT * FROM `projects` ORDER BY `id`');
+    $statement = $database->query('SELECT * FROM `topprojects` ORDER BY `id`');
 
     $results = [];
 
-    while ($project = $statement->fetch(PDO::FETCH_ASSOC)) {
-        $results[] = $project;
+    while ($topProject = $statement->fetch(PDO::FETCH_ASSOC)) {
+        $results[] = $topProject;
     }
 
     return $results;
 }
 
-function getProject($id){
+function getTopProject($id){
     $database = dbConnect();
-    $statement = $database->prepare('SELECT * FROM `projects` WHERE `id` = ?');
+    $statement = $database->prepare('SELECT * FROM `topprojects` WHERE `id` = ?');
     $data = [$id];
     $statement->execute($data);
 
-    $project = $statement->fetch(PDO::FETCH_ASSOC);
+    $topProject = $statement->fetch(PDO::FETCH_ASSOC);
 
-    return $project;
+    return $topProject;
+}
+function getAllOtherProjects(){
+    $database = dbConnect();
+
+    $statement = $database->query('SELECT * FROM `otherprojects` ORDER BY `id`');
+
+    $results = [];
+
+    while ($otherProject = $statement->fetch(PDO::FETCH_ASSOC)) {
+        $results[] = $otherProject;
+    }
+
+    return $results;
+}
+
+function getOtherProject($id){
+    $database = dbConnect();
+    $statement = $database->prepare('SELECT * FROM `otherprojects` WHERE `id` = ?');
+    $data = [$id];
+    $statement->execute($data);
+
+    $otherProject = $statement->fetch(PDO::FETCH_ASSOC);
+
+    return $otherProject;
 }
 
 function getHouse($id){
