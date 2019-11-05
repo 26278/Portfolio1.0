@@ -9,7 +9,7 @@
 
 <main class="main">
     <div class="image">
-        <img class="image__img" src="<?='/public/images/'. $project['image'] ?>" alt="<?= $project['alt'] ?>">
+        <img class="image__img" src="/images/<?= $project['image'] ?>" alt="<?= $project['alt'] ?>">
         <a href="<?= $project['url'] ?>" class="readmore" target="_blank">
             <button class="readmore__button">Live weergave</button>
         </a>

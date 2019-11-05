@@ -18,12 +18,14 @@ class ProjectsController{
     }
     function project($id){
 
-        $topProject = getTopProject($id);
-        $otherProject = getOtherProject($id);
-
+        if($id == 1 || $id == 2 || $id == 3 ) {
+            $project = getTopProject($id);
+        } else{
+            $project = getOtherProject($id);
+        }
         $template_engine = get_template_engine();
         echo $template_engine->render('show-project', [
-            'project' => $topProject,
+            'project' => $project,
 
         ]);
     }
