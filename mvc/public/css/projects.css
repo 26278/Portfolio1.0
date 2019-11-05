@@ -69,7 +69,7 @@
 @media screen and (max-width: 800px){
     .top-projects, .other-projects{
         flex-direction: column;
-        align-content: center;
+        align-items: center;
     }
     .top-projects, .other-projects{
         width: 100%;
